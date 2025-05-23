@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="head">My <span>Portfolio</span></h1>
+        <nav class="navbar" id="navbar">
+            <ul id="menuList">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="mytask.html">My task</a></li>
+                <li><a href="skill.html">Skills</a></li>
+                <li><a href="#">Resume</a></li>
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+            <div class="menu">
+                <button type="button" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+            </div>
+
+        </nav>
+    </header>
+    <div class="layer-1">
+        <div>
+            <h1 class="name">Mathew <span>Josephraj</span></h1>
+            <p class="para">I am a Full Stack Developer</p>
+        </div>
+        <div class="spin">
+            <div class="image">
+
+            </div>
+            <div class="image-div">
+                <img src="bg.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    <script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+        function toggleMenu() {
+            if (menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "500px";
+            }
+            else {
+                menuList.style.maxHeight = "0px"
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --background-image--: lineargradient(violet, blue);
+}
+
+header {
+    display: flex;
+    padding: 25px 60px;
+    justify-content: space-between;
+    font-family: sans-serif;
+}
+
+.menu {
+    background-color: transparent;
+    padding: 5px;
+    display: none;
+}
+
+.menu button {
+    color: white;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 5px;
+}
+
+.head {
+    color: white;
+    font-size: 35px;
+}
+
+.head span {
+    color: orange;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 15px;
+    transition: 0.5s;
+}
+
+.navbar ul li a:hover,
+.active {
+    background-color: rgb(234, 175, 66);
+}
+
+/* LAYER-1 */
+.layer-1 {
+    align-items: center;
+    width: 100%;
+    padding: 50px;
+}
+
+.content-1 {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.content-1 h1 {
+    font-size: 70px;
+}
+
+.skills {
+    display: block;
+    padding: 30px;
+    font-size: 45px;
+    background-image: linear-gradient(violet, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 10ch;
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: white;
+    }
+}
+
+
+/* NAVBAR MEDIA QUERY */
+
+@media(max-width:1200px) {
+    header {
+        font-size: 20px;
+        width: 100%;
+
+    }
+}
+
+@media(max-width:1000px) {
+    .layer-1 {
+        width: 100%;
+    }
+
+    .navbar ul li {
+        padding: 30px;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background-color: gray;
+        overflow: hidden;
+    }
+
+    #menuList {
+        transition: all 0.6s;
+    }
+
+    .name {
+        font-size: 40px;
+    }
+
+    .para {
+        font-size: 20px;
+    }
+
+    .layer-1 img {
+        width: 80px;
+        height: 240px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .image-div {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media(max-width:868px) {
+    .layer-1 {
+        width: 100%;
+        flex-direction: column-reverse;
+        gap: 100px;
+        margin: 0;
+        padding: 70px;
+    }
+
+    .navbar ul li {
+        padding: 30px;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background-color: gray;
+        overflow: hidden;
+    }
+
+    #menuList {
+        transition: all 0.6s;
+    }
+
+    .name {
+        font-size: 40px;
+    }
+
+    .para {
+        font-size: 20px;
+    }
+
+    .layer-1 img {
+        width: 80px;
+        height: 240px;
+    }
+
+    .image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .image-div {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media(max-width:500px) {
+    .layer-1 {
+        width: 100%;
+        flex-direction: column-reverse;
+        gap: 100px;
+        margin: 0;
+        padding: 70px;
+    }
+
+    header {
+        justify-content: space-between;
+        padding: 10px 10px;
+    }
+
+    .navbar ul li {
+        padding: 30px;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background-color: gray;
+        overflow: hidden;
+    }
+
+    #menuList {
+        transition: all 0.6s;
+    }
+
+    .name {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .para {
+        font-size: 20px;
+    }
+
+    .content-1 h1 {
+        font-size: 50px;
+    }
+
+    .skills {
+        font-size: 30px;
+    }
+
+    .image {
+        width: 230px;
+        height: 230px;
+    }
+
+    .image-div {
+        width: 230px;
+        height: 230px;
+    }
+}
+
+@media(max-width:450px) {
+    .layer-1 {
+        width: 100%;
+        flex-direction: column-reverse;
+        gap: 100px;
+        margin: 0;
+        padding: 70px;
+    }
+
+    .navbar ul li {
+        padding: 30px;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background-color: gray;
+        overflow: hidden;
+    }
+
+    #menuList {
+        transition: all 0.6s;
+    }
+
+    header {
+        justify-content: space-between;
+        padding: 10px 10px;
+    }
+
+    .head {
+        font-size: 30px;
+    }
+
+    .name {
+        font-size: 40px;
+    }
+
+    .para {
+        font-size: 20px;
+    }
+
+    .layer-1 img {
+        width: 60px;
+        height: 200px;
+    }
+
+    .image {
+        width: 230px;
+        height: 230px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .content-1 h1 {
+        font-size: 50px;
+    }
+
+    .skills {
+        font-size: 20px;
+    }
+}
+
+@media(max-width:400px) {
+    header {
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .layer-1 {
+        width: 100%;
+        flex-direction: column-reverse;
+        gap: 100px;
+        margin: 0;
+        padding: 70px;
+    }
+
+    .navbar ul li {
+        padding: 30px;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background-color: gray;
+        overflow: hidden;
+    }
+
+    #menuList {
+        transition: all 0.6s;
+    }
+
+    .name {
+        font-size: 40px;
+    }
+
+    .para {
+        font-size: 20px;
+    }
+
+    .layer-1 img {
+        width: 60px;
+        height: 180px;
+    }
+
+    .image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .image-div {
+        width: 200px;
+        height: 200px;
+    }
+
+    .content-1 h1 {
+        font-size: 30px;
+    }
+
+    .skills {
+        font-size: 20px;
+    }
+}
+
+@media(max-width:350px) {
+    header {
+        justify-content: space-between;
+        padding: 10px 10px;
+    }
+
+    body {
+        padding: 0;
+
+    }
+
+    .layer-1 {
+        width: 100%;
+        flex-direction: column-reverse;
+        gap: 50px;
+        margin: 0;
+        padding: 70px;
+    }
+
+    .navbar ul li {
+        padding: 30px;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background-color: gray;
+        overflow: hidden;
+    }
+
+    #menuList {
+        transition: all 0.6s;
+    }
+
+    .content-1 {
+        row-gap: 40px;
+    }
+
+    .content-1 h1 {
+        font-size: 40px;
+    }
+
+    .skills {
+        font-size: 28px;
+        width: 100%;
+        padding: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+}
+
+@media(max-width:300px) {
+    header {
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .layer-1 {
+        width: 100%;
+        flex-direction: column-reverse;
+        gap: 50px;
+        margin: 0;
+        padding: 70px;
+    }
+
+    .navbar ul li {
+        padding: 30px;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background-color: gray;
+        overflow: hidden;
+    }
+
+    #menuList {
+        transition: all 0.6s;
+    }
+
+    .content-1 {
+        row-gap: 40px;
+    }
+
+    .content-1 h1 {
+        font-size: 30px;
+    }
+
+    .skills {
+        font-size: 28px;
+        width: 100%;
+        padding: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+}

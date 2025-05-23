@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="skill.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="head">My <span>Portfolio</span></h1>
+        <nav class="navbar" id="navbar">
+            <ul id="menuList">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mytask.html">My task</a></li>
+                <li><a href="skill.html" class="active">Skills</a></li>
+                <li><a href="#">Resume</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="menu">
+                <button type="button" onclick="toggleMenu() "><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+    </header>
+    <div class="layer-1">
+        <div class="content-1">
+            <h1>I KNOWS</h1>
+            <ul class="skills" id="typewriter">
+
+            </ul>
+        </div>
+    </div>
+    <script>
+        const words = ["HTML", "CSS", "JAVASCRIPT", "BOOTSTRAP", "JQUERY", "EXPRESS JS", "MONGO DB"];
+        let i = 0;
+        let j = 0;
+        let currentWord = '';
+        let isDeleting = false;
+        const speed = 100;
+
+        function type() {
+            currentWord = words[i];
+            if (isDeleting) {
+                j--;
+            } else {
+                j++;
+            }
+
+            document.getElementById('typewriter').textContent = currentWord.substring(0, j);
+
+            if (!isDeleting && j === currentWord.length) {
+                isDeleting = true;
+                setTimeout(type, 3000);
+            } else if (isDeleting && j === 0) {
+                isDeleting = false;
+                i = (i + 1) % words.length;
+                setTimeout(type, 300);
+            } else {
+                setTimeout(type, isDeleting ? speed / 1 : speed);
+            }
+        }
+
+        type();
+    </script>
+    <script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+        function toggleMenu() {
+            if (menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "500px";
+            }
+            else {
+                menuList.style.maxHeight = "0px"
+            }
+        }
+
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
