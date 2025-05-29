@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-link a {
+    color: white;
+}
+
+.card img {
+    width: 330px;
+    height: 300px;
+}
+
+.container-fluid .heading {
+    color: burlywood;
+    font-size: 30px;
+
+}
+
+.navbar-nav li {
+    padding: 9px;
+}
+
+.navbar-nav li:hover {
+    background-color: burlywood;
+}
+
+.navbar-nav li.active {
+    background-color: burlywood;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.carousel {
+    width: 100%;
+}
+
+.carousel-inner {
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    position: relative;
+}
